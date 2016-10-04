@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/company-number">Back</a>
+
+      <h1 class="heading-large">
+        ACME Widgets Co.
+      </h1>
+
+      <!-- <p>One person must act as the authorising officer on behald of your company</p> -->
+
+      <dl class="panel panel-border-narrow">
+        <dt>Registered address:</dt>
+        <dd>20 West Street<br/>
+        Sheffield,
+        S44 6YP</dd>
+        <dt>Company director</dt>
+        <dd>Anthony Stark</dd>
+
+      </dl>
+
+
+      <form action="/company-vacancy" method="get" class="form">
+
+          <div class="form-group">
+            <label class="form-label-bold" for="company-name">Company number</label>
+            <p class="form-hint">Your registered company number</p>
+            <input type="text" class="form-control" id="company-name">
+          </div>
+<!--
+          <div class="form-group">
+            <label class="form-label-bold" for="company-number">Company number</label>
+            <input type="text" class="form-control" id="company-number" name="company-number">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="company-ref">Company tax reference</label>
+            <p class="form-hint">Your Inland Revenue reference, for eg YU18292819</p>
+            <input type="text" class="form-control" id="company-ref" name="company-ref">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label-bold" for="company-cat">Company category</label>
+            <input type="text" class="form-control" id="company-cat" name="company-cat">
+          </div> -->
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
