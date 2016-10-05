@@ -30,4 +30,18 @@ router.get('/examples/over-18', function (req, res) {
 
 // add your routes here
 
+// rep-check branch
+router.get('/rep-add', function (req, res) {
+  var addRep = req.query.addRep
+  var oisc = req.query.oisc
+
+  if (addRep === 'false') {
+    res.redirect('/sponsor-numbers')
+  } else if (oisc === 'true') {
+    res.redirect('/rep-add-oisc')
+  } else {
+    res.render('rep-add')
+  }
+})
+
 module.exports = router
