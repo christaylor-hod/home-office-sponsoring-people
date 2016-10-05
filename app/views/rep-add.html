@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/rep-check">Back</a>
+
+      <h1 class="heading-large">
+        Identify your representative
+      </h1>
+
+      <form action="/sponsor-numbers" method="get" class="form">
+
+        <div class="form-group">
+          <label class="form-label-bold" for="rep-name">Representative name</label>
+          <input type="text" class="form-control" id="rep-name">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="rep-email">Representative email</label>
+          <input type="email" class="form-control" id="rep-email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="rep-org">Representative organisation</label>
+          <input type="text" class="form-control" id="rep-org">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

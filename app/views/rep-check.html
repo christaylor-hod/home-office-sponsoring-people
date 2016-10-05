@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/company-evidence">Back</a>
+
+      <h1 class="heading-large">
+        Identify your representative
+      </h1>
+
+      <p>You can add a licensed representative to process applications on your behalf.</p>
+
+      <form action="/rep-add" method="get" class="form">
+
+        <h2 class="form-label-bold">
+          Do you want to add a representative?
+        </h2>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visuallyhidden">Do you want to add a representative?</legend>
+
+            <label for="addRepTrue" class="block-label" data-target="oisc-ref-question">
+              <input type="radio" name="addRep" value="true" id="addRepTrue">
+              Yes
+            </label>
+
+            <label for="addRepFalse" class="block-label">
+              <input type="radio" name="addRep" value="false" id="addRepFalse">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="oisc-ref-question">
+
+              <h2 class="form-label-bold">
+                Do you have an OISC reference?
+              </h2>
+
+              <div class="form-group">
+                <fieldset>
+
+                  <legend class="visuallyhidden">Do you have an OISC reference?</legend>
+
+                  <label for="oiscTrue" class="block-label">
+                    <input type="radio" name="oisc" value="true" id="oiscTrue">
+                    Yes
+                  </label>
+
+                  <label for="oiscFalse" class="block-label">
+                    <input type="radio" name="oisc" value="false" id="oiscFalse">
+                    No
+                  </label>
+
+                </fieldset>
+              </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Continue">
+            </div>
+
+          </fieldset>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
