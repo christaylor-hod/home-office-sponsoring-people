@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Check your answers before sending your application
+  </h1>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium">
+            Sponsorship application
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          Authorising Officer
+        </td>
+        <td>
+          Anthony Stark<br>
+          Date of birth: 31/3/1980
+        </td>
+        <td class="change-answer">
+          <a href="/ao-details">
+            Change <span class="visuallyhidden">Authorising officer</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Basic information
+        </td>
+        <td>
+          HMRC reference: HMRC123<br>
+          Company number: 100191
+        </td>
+        <td class="change-answer">
+          <a href="/basic-info">
+            Change <span class="visuallyhidden">Basic information</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Your company details
+        </td>
+        <td>
+          ACME Widgets Co.<br>
+          20 West Street<br>
+          Sheffield<br>
+          S44 6YP<br>
+          Company director: Anthony Stark<br>
+          Company type: Private limited company
+        </td>
+        <td class="change-answer">
+          <a href="/company-searchresult">
+            Change <span class="visuallyhidden">Your company details</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Representative
+        </td>
+        <td>
+          John Smith<br>
+          Email: john.smith@representatives.com<br>
+          Organisation: Representatives
+        </td>
+        <td class="change-answer">
+          <a href="/rep-add">
+            Change <span class="visuallyhidden">Representative details</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Sponsor numbers
+        </td>
+        <td>
+          No. requested: 5<br>
+          Explanation: We need these migrant workers due to a company expansion in an area only served by these migrants.
+        </td>
+        <td class="change-answer">
+          <a href="/sponsor-numbers">
+            Change <span class="visuallyhidden">Sponsor numbers</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Vacancy information
+        </td>
+        <td>
+          Interaction designer<br>
+          Refine and shape user journeys and help remove complexity where it isn’t needed.  Design for diverse users and platforms and ensure usability and accessibility of the service. Help identify gaps in product understanding, help plan user research and analytics and help inform the design of user journeys.<br>
+          Job type: Permanent
+        </td>
+        <td class="change-answer">
+          <a href="/company-vacancy">
+            Change <span class="visuallyhidden">Vacancy information</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-medium">Now send your application</h2>
+
+  <p class="text">
+    By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>
+
+  <div class="form-group">
+    <a href="confirmation-page" class="button">Accept and send application</a>
+  </div>
+
+</main>
+
+{% endblock %}
