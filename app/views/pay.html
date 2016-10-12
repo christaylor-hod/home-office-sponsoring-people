@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Select how your want to pay 
+  </h1>
+
+  <p>You need to pay £536 for us to process your application.</p>
+
+      <form action="/payment-complete" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">Select a payment method</legend>
+
+
+            <label for="creditDebit" class="block-label">
+              <input type="radio" name="paymentMethod" value="Credit/debit card" id="creditDebit">
+              Credit/debit card
+            </label>
+
+            <label for="paypal" class="block-label">
+              <input type="radio" name="paymentMethod" value="PayPal" id="paypal">
+              PayPal
+            </label>
+
+            <label for="BACS" class="block-label">
+              <input type="radio" name="paymentMethod" value="BACS transfer" id="BACS">
+              BACS transfer
+            </label>
+
+            <label for="other" class="block-label">
+              <input type="radio" name="paymentMethod" value="Other" id="other">
+              Other
+            </label>
+
+
+          </fieldset>
+        </div>
+      </form>
+<!--
+  <p class="text">
+    By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>  
+-->
+  <div class="form-group">
+    <a href="payment-complete" class="button">Continue</a>
+  </div>
+
+</main>
+
+{% endblock %}

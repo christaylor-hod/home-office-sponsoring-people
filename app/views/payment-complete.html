@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Payment complete 
+  </h1>
+
+  <h2 id="confirmation-message" style="font-size: 30px">{{confirmationMessage}}</h2>
+         <p> We will email you a receipt shortly</p>
+
+      <div class="panel panel-border-wide">
+       
+           
+            <h2>Payment summary</h2>
+
+            <p> Reference number: <strong id="payment-reference">ASDSDVF234</strong></p>
+            <p> Payment for: <strong id="payment-description">Sponsor licence application</strong> </p>
+            <p> Amount paid: <span id="amount">£536</span></p>
+            
+        </div>
+  <h2 class="heading-medium">Complete your application</h2>
+
+  <p class="text">
+    By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>  
+
+  <div class="form-group">
+    <a href="confirmation-page" class="button">Submit application</a>
+  </div>
+
+</main>
+
+{% endblock %}
