@@ -42,9 +42,32 @@ S44 6YP</textarea>
           <input type="text" class="form-control" id="company-type" name="company-type" value="Private limited company">
         </div>
 
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visuallyhidden">Do you currently employ 50 people or more?</legend>
+
+            <label class="form-label-bold" for="company-director">Do you currently employ 50 people or more?</label>
+
+            <label for="moreThan50" class="block-label">
+              <input type="radio" name="numberOfEmployees" value="Yes" id="moreThan50">
+              Yes
+            </label>
+
+            <label for="lessThan50" class="block-label">
+              <input type="radio" name="numberOfEmployees" value="No" id="lessThan50">
+              No
+            </label>
+
+
+          </fieldset>
+        </div>
+
         <div class="form-group">
           <input type="submit" class="button" value="Continue">
         </div>
+
 
       </form>
 
