@@ -10,7 +10,7 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <a class="link-back" href="/basic-info">Back</a>
+      <a class="link-back" href="./company-info">Back</a>
 
       <h1 class="heading-large">
         Your company
@@ -18,37 +18,137 @@
 
       <p>Please check this information.</p>
 
-      <form action="/company-evidence" method="get" class="form">
+      <table class="check-your-answers">
 
-        <div class="form-group">
-          <label class="form-label-bold" for="company-name">Company name</label>
-          <input type="text" class="form-control" id="company-name" value="ACME Widgets Co.">
+          <thead>
+            <tr>
+              <th colspan="2">
+                <h2 class="heading-medium">
+                  Your company details retrieved from Companies House
+                </h2>
+              </th>
+              <th>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>
+                Company name
+              </td>
+              <td>
+                Acme Widgets Co. Ltd.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Company address
+              </td>
+              <td>
+                20 West Street<br/>
+                Sheffield<br/>
+                S44 6YP
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Company director
+              </td>
+              <td>
+                Janet Smith
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Company type
+              </td>
+              <td>
+                Private limited company
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Latest accounts turnover (2015-16)
+              </td>
+              <td>
+                £672,002
+              </td>
+            </tr>
+          </tbody>
+      </table>
+
+      <form action="./company-evidence" method="get" class="form">
+
+      <div class="form-group">
+          <fieldset class="inline">
+            <h2 class="heading-medium">
+              Are these details correct?
+            </h2>
+            <legend class="visuallyhidden">Are these details correct?</legend>
+
+            <label for="addRepTrue" class="block-label" >
+              <input type="radio" name="addRep" value="true" id="addRepTrue">
+              Yes
+            </label>
+
+            <label for="addRepFalse" class="block-label" data-target="company-details-check">
+              <input type="radio" name="addRep" value="false" id="addRepFalse">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="company-details-check">
+
+              <h2 class="form-label-bold">
+                Edit company details?
+              </h2>
+
+
+              <div class="form-group">
+                <label class="form-label-bold" for="company-name">Company name</label>
+                <input type="text" class="form-control" id="company-name" value="ACME Widgets Co.">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="company-address">Company address</label>
+                <textarea class="form-control" id="company-address" cols="30" rows="5">20 West Street
+      Sheffield
+      S44 6YP</textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="company-director">Company director</label>
+                <input type="text" class="form-control" id="company-director" name="company-director" value="Anthony Stark">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="company-type">Company type</label>
+                <input type="text" class="form-control" id="company-type" name="company-type" value="Private limited company">
+              </div>
+              <div class="form-group">
+                <label class="form-label-bold" for="company-type">Latest accounts turnover (2015-16)</label>
+                <input type="text" class="form-control" id="company-type" name="company-type" value="£672,002">
+              </div>
+
+            </div>
+
+
+
+            <div class="form-group">
+              <input type="submit" class="button" value="Continue">
+            </div>
+
+          </fieldset>
         </div>
 
-        <div class="form-group">
-          <label class="form-label-bold" for="company-address">Company address</label>
-          <textarea class="form-control" id="company-address" cols="30" rows="5">20 West Street
-Sheffield
-S44 6YP</textarea>
-        </div>
 
-        <div class="form-group">
-          <label class="form-label-bold" for="company-director">Company director</label>
-          <input type="text" class="form-control" id="company-director" name="company-director" value="Anthony Stark">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label-bold" for="company-type">Company type</label>
-          <input type="text" class="form-control" id="company-type" name="company-type" value="Private limited company">
-        </div>
-
-
+<!--
         <div class="form-group">
           <fieldset class="inline">
 
-            <legend class="visuallyhidden">Do you currently employ 50 people or more?</legend>
+            <legend class="visuallyhidden">Do you currently employ more than 50 people?</legend> 
 
-            <label class="form-label-bold" for="company-director">Do you currently employ 50 people or more?</label>
+            <label class="form-label-bold" for="company-director">Do you currently employ more than 50 people?</label>
 
             <label for="moreThan50" class="block-label">
               <input type="radio" name="numberOfEmployees" value="Yes" id="moreThan50">
@@ -67,7 +167,7 @@ S44 6YP</textarea>
         <div class="form-group">
           <input type="submit" class="button" value="Continue">
         </div>
-
+-->
 
       </form>
 
