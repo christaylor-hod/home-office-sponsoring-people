@@ -44,4 +44,15 @@ router.get('/rep-add', function (req, res) {
   }
 })
 
+// 'not on Companies House' branch
+router.get('/company-searchresult', function (req, res) {
+  var isOnCompaniesHouse = req.query.onCompHouse
+
+  if (isOnCompaniesHouse == 'No') {
+    res.redirect('/org-type')
+  } else {
+    res.render('company-searchresult')
+  }
+})
+
 module.exports = router

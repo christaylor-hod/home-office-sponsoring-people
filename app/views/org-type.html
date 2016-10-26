@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="./org-info">Back</a>
+
+      <h1 class="heading-large">
+        Your organisation
+      </h1>
+
+      <p>Please check this information.</p>
+
+      <form action="./company-evidence" method="get" class="form">
+
+
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">Your organisation type</legend> 
+
+            <label class="form-label-bold" for="company-director">Your organisation type</label>
+
+            <label for="limitedCompany" class="block-label">
+              <input type="radio" name="typeOfOrg" value="ltdCo" id="limitedCompany">
+              Limited company
+            </label>
+
+            <label for="limitedCompanyCharity" class="block-label">
+              <input type="radio" name="typeOfOrg" value="ltdCoCharity" id="limitedCompanyCharity">
+              Limited company (charity)
+            </label>
+
+            <label for="SoleTrader" class="block-label">
+              <input type="radio" name="typeOfOrg" value="soleTrader" id="SoleTrader">
+              Sole trader
+            </label>
+
+            <label for="BusinessPartnership" class="block-label">
+              <input type="radio" name="typeOfOrg" value="busPartnership" id="BusinessPartnership">
+              Business partnership
+            </label>
+
+
+            <div class="form-group">
+                  <details role="group">
+                    <summary role="button" aria-controls="show-more-details" aria-expanded="false"><span class="summary">My organisation type isn't shown</span></summary>
+                    <div class="panel panel-border-narrow" id="show-more-details" aria-hidden="true">
+                      <p>How about now?</p>
+
+                      <label for="CharitableTrust" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableTrust" id="CharitableTrust">
+                        Charitable trust
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableInc">
+                        Charitable incorporated organisation
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableTrust">
+                        Listed public body
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableTrust">
+                        Unlisted public body
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableTrust">
+                        Diplomatic mission
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableTrust">
+                        Unincorporated charitable association
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableTrust">
+                        Industrial and provident society
+                      </label>
+
+                      <label for="CharitableInc" class="block-label">
+                        <input type="radio" name="typeOfOrg" value="charitableInc" id="CharitableTrust">
+                        Ecclesiastical corporation
+                      </label>
+
+
+                    </div>
+                  </details>
+                </div>
+             
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

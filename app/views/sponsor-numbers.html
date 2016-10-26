@@ -19,16 +19,48 @@
       <form action="./company-vacancy" method="get" class="form">
 
           <div class="form-group">
-            <label class="form-label-bold" for="sponsor-number">How many workers from  outside the European Economic Area (EEA) or Switzerland will you need visas for within the next 12 months?</label>
+            <label class="form-label-bold" for="sponsor-number">Approximately how many workers from outside the European Economic Area (EEA) or Switzerland do you expect to employ in the next 12 months?</label>
             <!--<p class="form-hint">If you don&rsquo;t know enter 0</p>-->
-            <input type="text" class="form-control" id="sponsor-number" name="sponsor-number">
+            <input type="text" class="form-control short-input" id="sponsor-number" name="sponsor-number">
           </div>
 
           <div class="form-group">
-            <label class="form-label-bold" for="sponsor-desc">Explain your business need</label>
-            <p class="form-hint">Provide details about why you need these workers. For example: business expansion, needing specialist skills, extension of existing leave.</p>
-            <textarea type="text" class="form-control" id="sponsor-desc" name="sponsor-desc" rows="7" cols="80"></textarea>
+            <label class="form-label-bold" for="business-need">Explain your business need for these workers</label>
+            
+            <fieldset>
+
+              <legend class="visuallyhidden">Explain your business need for these workers</legend>
+
+              <label class="block-label" for="bus-expansion">
+                <input type="checkbox" name="bus-expansion" value="British" id="bus-expansion">
+                Business expansion
+              </label>
+
+              <label class="block-label" for="specialist-skills">
+                <input type="checkbox" name="specialist-skills" value="Irish" id="specialist-skills">
+                Needing specialist skills
+              </label>
+
+              <label class="block-label" for="extend-leave">
+                <input type="checkbox" name="extend-leave" value="Wales" id="extend-leave">
+                Extension of existing leave
+              </label>
+
+              <label class="block-label" for="business-need-other" data-target="show-business-need-other-detail">
+                <input type="checkbox" name="business-need-other" value="Wales" id="business-need-other">
+                Other
+              </label>
+
+              <div class="panel panel-border-narrow js-hidden" id="show-business-need-other-detail">
+                <label class="form-label" for="business-need-other-detail">
+                  Why you need these workers
+                </label>
+                <input class="form-control" type="text" id="business-need-other-detail">
+              </div>
+
+            </fieldset>
           </div>
+
 
           <div class="form-group">
             <input type="submit" class="button" value="Continue">

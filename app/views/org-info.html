@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="./ao-details-nationality">Back</a>
+
+      <h1 class="heading-large">
+        Organisation details
+      </h1>
+
+      <form action="./company-searchresult
+      " method="get" class="form">
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <legend class="visuallyhidden">Is your organisation registered with Companies House?</legend>
+
+            <label class="form-label-bold" for="company-director">Is your organisation registered with Companies House?</label>
+
+            <label for="isOnCompHouse" class="block-label" data-target="is-on-companies-house">
+              <input type="radio" name="onCompHouse" value="Yes" id="isOnCompHouse">
+              Yes
+            </label>
+
+            <label for="notOnCompHouse" class="block-label" data-target="not-on-companies-house">
+              <input type="radio" name="onCompHouse" value="No" id="notOnCompHouse" >
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="is-on-companies-house">
+                  
+              <div class="form-group">
+
+                <label class="form-label-bold" for="nino">Company number</label>
+                
+                <p class="form-hint">Eg 234532453</p>
+                <input type="text" class="form-control" id="nino" name="nino" length="8">
+              </div>
+
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="not-on-companies-house">
+
+              <div class="form-group">
+                <label class="form-label-bold" for="hmrc-reference">HMRC reference</label>
+                <p class="form-hint">Eg HMRC123. You can find this on your [name of document]</p>
+                <input type="text" class="form-control" id="hmrc-reference" name="hmrc-reference">
+              </div>
+
+
+            </div>
+
+          </fieldset>
+        </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
